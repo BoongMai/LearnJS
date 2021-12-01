@@ -36,3 +36,4 @@ var number = 4;
 var output = --number + number++;
 
 console.log('Out put: ', output);
+console.log('Cun Cat');
