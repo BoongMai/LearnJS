@@ -37,3 +37,19 @@ var output = --number + number++;
 
 console.log('Out put: ', output);
 console.log('Cun Cat');
+
+
+
+// --------------------------
+
+bài tập prefix & Postfix
+var a;
+var b;
+
+var a = 7;
+var b = 6;
+
+var c = a++ + --a + --b 
+
+
+console.log(c)
