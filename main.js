@@ -60,14 +60,31 @@
 // console.log(result)
 /**
  * Kiểu Boolean có 2 giá trị là true và false
- */
-var a = 2;
-var b = 2;
+//  */
+// var a = 2;
+// var b = 2;
 
-if (typeof b == "number" && typeof a == "number"){
-  result = a + b;
- console.log(result)
-}else{
-    console.log('cc')
-}
+// if (typeof b == "number" && typeof a == "number"){
+//   result = a + b;
+//  console.log(result)
+// }else{
+//     console.log('cc')
+// }
+
+
+  var socialType = 'email'
+  var isVerified = true;
+  var result;
+
+  if (socialType == 'google' || socialType == 'facebook'){
+      result = true;
+      console.log(result)
+  }
+  else if (socialType === 'email' && isVerified == true){
+      result = true;
+      console.log(result)
+  } else if (socialType ==='email' &&  isVerified == false) {
+      result = false;
+      console.log(result)
+  }
 
