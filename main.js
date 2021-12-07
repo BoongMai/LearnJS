@@ -63,7 +63,7 @@
 //  */
 // var a = 2;
 // var b = 2;
-
+//-------------------------------//
 // if (typeof b == "number" && typeof a == "number"){
 //   result = a + b;
 //  console.log(result)
@@ -72,19 +72,67 @@
 // }
 
 
-  var socialType = 'email'
-  var isVerified = true;
-  var result;
+//   var socialType = 'email'
+//   var isVerified = true;
+//   var result;
 
-  if (socialType == 'google' || socialType == 'facebook'){
-      result = true;
-      console.log(result)
-  }
-  else if (socialType === 'email' && isVerified == true){
-      result = true;
-      console.log(result)
-  } else if (socialType ==='email' &&  isVerified == false) {
-      result = false;
-      console.log(result)
-  }
+//   if (socialType == 'google' || socialType == 'facebook'){
+//       result = true;
+//       console.log(result)
+//   }
+//   else if (socialType === 'email' && isVerified == true){
+//       result = true;
+//       console.log(result)
+//   } else if (socialType ==='email' &&  isVerified == false) {
+//       result = false;
+//       console.log(result)
+//   }
+// var myFuntion = function() {
+//   alert('tao tạo funtion')
+// }
 
+
+
+// // var createFuntion = function (){
+
+// }
+// createFuntion();
+
+// var myObject = {
+//   name: 'Duy',
+//   age: 18,
+//   phoneCall:'3232222232',
+//   myFuntion,
+  
+// }
+
+// console.log(myObject)
+
+
+
+// var a = 2 +1 
+// var b = 2
+// function run(a,b){
+// let result
+
+// // (!a || undefined)&& (b = result)
+// // return result;
+// // }
+// var commentText = '"Học chưa hiểu là học chưa đủ!"'
+// console.log(commentText);
+// var authorName = 'Sơn Đặng:'
+// console.log(authorName.indexOf('Đ'));
+
+// var fullCommentText = authorName + ' ' + commentText ;
+// console.log(fullCommentText);
+
+
+// console.log(authorName.split('n'));
+
+
+
+var a = null;
+var title = 'Javascript'
+console.log(typeof a);
+
+console.log(title.indexOf('Javascript'));
