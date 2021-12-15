@@ -166,14 +166,96 @@
 // // Number.parseFloat();Chuyển đổi chuỗi đã cho thành một số dấu phẩy động
 
 // // Number.parseInt();Chuyển đổi chuỗi đã cho thành một số nguyên
-// // Number.prototype.toFixed();	Chuyển đổi và trả về chuỗi đại diện cho số đã cho, có số chữ số chính xác sau dấu thập phân
+// // Number.prototype.toFixed();Không truyền tham số thì làm trònChuyển đổi và trả về chuỗi đại diện cho số đã cho, có số chữ số chính xác sau dấu thập phân
 // // Number.prototype.toString();Chuyển đổi và trả về số đã cho dưới dạng chuỗi
 
 
-var a = '232.00'
-console.log(Number.parseFloat(a));
+// var a = '232.00'
+// console.log(Number.parseFloat(a));
 
 
-var numberObject = 111.22123;
+// var numberObject = 111.22123;
 
-console.log(numberObject.toFixed(4));
+// console.log(numberObject.toFixed(4));
+
+// var soNe = new Number(2);
+// NaN đại diện số không hợp lệ.
+
+// var noANo = 12 / 'das'
+// console.log(isNaN(noANo))
+
+// var so = 123
+
+// console.log(typeof so.toString());
+// kiem ra array = cach Array.isArray() truyen bien can kiem tra vao
+
+
+// var b = myArray[myArray.length -1]
+// console.log(b);
+// // console.log(Array.isArray(myArray));
+// // console.log(myArray);
+// join('');bien mang thanh chuoi, tham so truyen vao la ki tu ma minmh muon bien doi
+//pop() xoa element cuoi mang  va trave phan tu da xoa, khong truyen tham so vao
+//push('hk') them phan vao cuoi mang
+// shift() xoa phan tu dau tien va tra ve phan tu da xoa, khong truyen tham so vao
+//unshift('dasd') them phan tu vao dau mang va tra ve phan tu moi
+//splice(1 , 1); phan tu dau dinh vi con tro, vi tri 2 bat dau xoa bao nhieu phan tu
+//truyen vao 0 thi khong xoa phan tu, them phan tu thu 3 la chen phan tu
+
+// console.log(myArray.splice(1, 1)); //dat tro vao vi tri so 1 vaxoa di vi tri so 1 
+
+// if (myArray1.length == 0){
+//    myArray1.push('asd','1223'); 
+//    console.log(myArray1);
+// }
+
+//concat() noi' mang~
+// console.log(myArray.concat(myArray1));
+
+// tham so
+// function Name(tham so) {}
+// Name('doi so')
+// khong gioi han kieu du lieu nhap vao gi cung dc
+//
+// var a = 1,
+//     b = 4
+
+// function qeea(a, b) {
+//     qeea = a + b
+    
+// }
+
+// console.log(qeea);
+
+// var dayLaObject = {
+//     asd: 123,
+//     key1: function () {
+//         alert('dssdas')   
+//     }
+// }
+
+// console.log(typeof dayLaObject.asd);
+//object contructer thi viet hoa chu cai dau tien cua ten.
+var User =  function(firstName, lastName, age) {
+    this.firstName = firstName,
+    this.lastName = lastName,
+    this.age = age
+    this.getName = function () {
+        return `${this.firstName} ${this.lastName}`
+    }
+    this.checkAge = function () {
+        if(this.age < 18){
+            alert('Chưa đủ tuổi')
+        }else{
+            return this.getName()
+
+        }
+        
+    }
+}
+
+var boss = new User('Phạm', 'Duy', 18 );
+var neiber = new User('Hoàng', 'Dũng', 21);
+
+console.log(boss.checkAge());
+console.log(neiber);
