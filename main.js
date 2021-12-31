@@ -236,26 +236,276 @@
 
 // console.log(typeof dayLaObject.asd);
 //object contructer thi viet hoa chu cai dau tien cua ten.
-var User =  function(firstName, lastName, age) {
-    this.firstName = firstName,
-    this.lastName = lastName,
-    this.age = age
-    this.getName = function () {
-        return `${this.firstName} ${this.lastName}`
-    }
-    this.checkAge = function () {
-        if(this.age < 18){
-            alert('Chưa đủ tuổi')
-        }else{
-            return this.getName()
+// var User =  function(firstName, lastName, age) {
+//     this.firstName = firstName,
+//     this.lastName = lastName,
+//     this.age = age
+//     this.getName = function () {
+//         return `${this.firstName} ${this.lastName}`
+//     }
+//     this.checkAge = function () {
+//         if(this.age < 18){
+//             alert('Chưa đủ tuổi')
+//         }else{
+//             return this.getName()
 
-        }
+//         }
         
+//     }
+// }
+
+// var boss = new User('Phạm', 'Duy', 18 );
+// var neiber = new User('Hoàng', 'Dũng', 21);
+
+// console.log(boss.checkAge());
+// console.log(neiber);
+
+// let a = new Date()
+// let b = new Date()
+// console.log(a.getTime() - b.getTime()/ 1000);
+
+
+// function run(a) {
+//     var a = 8
+//     Number.isInteger(a)  && a > 0 ? `${a}` : Math.floor(a);
+// }
+
+// console.log(run());
+
+// var myArray = [
+//     'Dy',
+//     'Tu',
+//     'Truong',
+//     'Nhi'
+// ]
+// var arrayLenght = myArray.length
+
+// // for(var i=1;i < myArray.length; i++){
+// //     console.log(myArray[i]);
+// // }
+// for(var key in myArray){
+
+//     if(myArray.length %2 !== 0){
+//         break;
+//     }
+
+//     console.log(myArray[key]);
+// }
+
+// for(var i = 0; i<10;i++){
+//     if(i %2 == 0){
+//         continue;
+//     }
+//     console.log(i);
+// }
+// var i = 0
+// var isSuccess = false;
+// do {
+//     i++
+//     console.log('Lan: ' + i);
+
+//     if(i==11){
+//         isSuccess = true;
+//     }else if (i ==10){
+//         break;
+//     }
+// }while(!isSuccess && i <12)
+
+// var myArray = [
+//     'Duy',
+//     'Tu',
+//     'Truong'
+// ]
+// for(var i = 0 ; i < myArray.length;i ++){
+//   console.log(myArray[i]);
+// }
+
+
+// var courses = [
+//   {
+//      id:0,
+//     name:'duy',
+//     age:18,
+//     coin:120
+//   },
+//   {
+//      id:1,
+//     name:'Tú',
+//     age:28,
+//     coin:120
+//   },
+//   {
+//      id:2,
+//     name:'Huy',
+//     age:28,
+//     coin:120
+//   },
+//   {
+//     id:3,
+//     name:'Trường',
+//     age:98,
+//     coin:120
+//   },
+// ]
+
+// var courses2 = [
+//   {
+//      id:0,
+//     name:'duy',
+//     age:18,
+//     coin:120
+//   },
+//   {
+//      id:1,
+//     name:'Tú',
+//     age:28,
+//     coin:120
+//   },
+//   {
+//      id:2,
+//     name:'Huy',
+//     age:28,
+//     coin:120
+//   },
+//   {
+//     id:3,
+//     name:'Trường',
+//     age:98,
+//     coin:120
+//   },
+// ]
+
+
+// function tong(a,b) {
+//   return a + b.coin
+// }
+
+// var total = courses2.reduce(tong, 0)
+
+// console.log(total);
+// var check = courses.every(function (check1) {
+//   return check1.coin ===120
+// })
+// console.log(check);
+
+// var check = courses2.some(check => check.coin ===120)
+// console.log(check);
+
+// var check = courses.find(check => check.name === '231')
+// console.log(check);
+
+// var check = courses.map(check => check.coin)
+// console.log(check);
+
+// var check = courses.filter(check => check.id === 10)
+// console.log(check);
+//cách 1:
+// var i = 0
+// function coinHandler(giaTriTruyenVao, giaTriTaiViTrinCuaMang) {
+//   i++
+//   var total = giaTriTruyenVao + giaTriTaiViTrinCuaMang.coin
+//   console.table({
+//     'Lần chạy thứ: ': i,
+//     'Giá trị truyền vào: ': giaTriTruyenVao,
+//     'Giá trị tích trữ: ': giaTriTaiViTrinCuaMang.coin,
+//     'Tổng: ': total
+//   })
+//   return total
+// }
+// var totalCoin = courses.reduce(coinHandler, 0)
+
+// console.log(totalCoin);
+
+//cách 2:
+// var totalCoin = courses.reduce(function (a, b) {
+//   return a + b.coin
+// }, 0)
+
+// console.log(totalCoin);
+
+//cách 3:
+
+// var totalCoin = courses.reduce((a,b) => a + b.coin, 50) 
+
+// console.log(totalCoin);
+
+// var a = 'hi'
+// var b = 2
+// console.log(parseInt(a) + b);
+// var totalCoin = 0;
+// for(var course of courses){
+//   totalCoin += course.coin
+// }
+// console.log(totalCoin);
+
+// function  input(nini) {
+//   return {
+//     age: nini.age,
+//     name: `Tui ten la: ${nini.name}`
+//   }
+// }
+// var newnew = courses.map(function (input, index) {
+//   return {
+//     id:`${input.id} ${input.name}`
+//   }
+// })
+
+// console.log(newnew);
+// forEech
+// var isFree =[]
+
+// courses.forEach(function (course, index) {
+//      return isFree[course.coin] = course.name
+// })
+// console.log(isFree);
+
+// var isFree = courses.every(function (course, index) {
+//   console.log(index);
+//   return course.coin ===2;
+  
+// })
+
+// console.log(isFree);
+
+
+// var isFree = courses.some(function (course, index) {
+//   console.log(index);
+//   return course.coin ===0;
+// })
+// // console.log(isFree);
+// var isFree = courses.find(function (course, index) {
+//   console.log(index);
+//   return course.name === 'Huy';
+// })
+// console.log(isFree);
+// var isFree = courses.filter(function (course, index) {
+//   console.log(index);
+//   return course.name === 'Huy';
+// })
+// console.log(isFree);
+
+//lam phang mang 
+// var listFriend = [1,2,[3,4],5,6,[7,8],9,10]
+// var flatList = listFriend.reduce((flatArray, friend) => 
+//     flatArray.concat(friend), [])
+
+// console.log(flatList);
+
+Array.prototype.reduce2 = function (callback, totalNum) { 
+  let i = 0
+  if(arguments.length < 2 ){
+    i = 1
+    totalNum = this[0]
+  }
+  for( ; i < this.length; i++ ){
+    totalNum = callback(totalNum, this[i], i, this)
     }
+    
+  return totalNum
 }
+const listNum = [1,2,3,4,5]
 
-var boss = new User('Phạm', 'Duy', 18 );
-var neiber = new User('Hoàng', 'Dũng', 21);
-
-console.log(boss.checkAge());
-console.log(neiber);
+const totalNum = listNum.reduce2((a, b) => {
+  return a + b
+},)
+console.log(totalNum);
