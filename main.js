@@ -491,21 +491,50 @@
 
 // console.log(flatList);
 
-Array.prototype.reduce2 = function (callback, totalNum) { 
-  let i = 0
-  if(arguments.length < 2 ){
-    i = 1
-    totalNum = this[0]
-  }
-  for( ; i < this.length; i++ ){
-    totalNum = callback(totalNum, this[i], i, this)
-    }
+// Array.prototype.reduce2 = function (callback, totalNum) { 
+//   let i = 0
+//   if(arguments.length < 2 ){
+//     i = 1
+//     totalNum = this[0]
+//   }
+//   for( ; i < this.length; i++ ){
+//     totalNum = callback(totalNum, this[i], i, this)
+//     }
     
-  return totalNum
-}
-const listNum = [1,2,3,4,5]
+//   return totalNum
+// }
+// const listNum = [1,2,3,4,5]
 
-const totalNum = listNum.reduce2((a, b) => {
-  return a + b
-},)
-console.log(totalNum);
+// const totalNum = listNum.reduce2((a, b) => {
+//   return a + b
+// },)
+// console.log(totalNum);
+
+/**
+ * getById, querrySelector thì trả về một element
+ * getElementByClassName thì trả về một HTML colection
+ * querrySelectorAll trả về một NodeList bao gồm tất cả element tương ứng và Id hoặc class của nó nếu có
+ */
+
+
+// var elementNe = document.querySelector('.firstName')
+// console.log(elementNe);
+
+/**
+ * Để thêm attributes vào element thì phải gọi được tới element đó
+ * và đùng tên biến đã tạo (.)+ attributes muốn thêm
+ */
+
+var firstNameElt = document.querySelectorAll('a')[2]// Lấy element
+console.log(firstNameElt);
+
+firstNameElt.setAttribute('style', 'color:red;')//set
+
+console.log(firstNameElt.getAttribute('style'));//get
+//Lấy phần tử trong một Nodelist
+// for(var i = 0; i <elementFirstName.length;i++){
+//     console.log(elementFirstName[i]);
+// }
+
+// console.log(firstNameElt);
+// console.log(elementFirstName);

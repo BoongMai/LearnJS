@@ -1,15 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+
+        }
+        .firstName li:hover a {
+            background-color: royalblue;
+            color: red;
+            text-transform: uppercase;
+        }
+
+        .lastName li:hover a {
+            background-color: darkblue;
+            color: darkorange;
+            text-transform: uppercase;
+        }
+        
+        li {
+
+            min-height: 60px;
+            display: block;
+            list-style-type: none;
+            font-size: 20px;
+        }
+
+        a {
+            line-height: 60px;
+            display: block;
+            text-decoration: none;
+        }
+    </style>
 </head>
+
 <body>
+    <div id="main">
+        <div id="listName">
+            <ul class="firstName">
+                <li><a href="">Kante</a></li>
+                <li><a href="">Kelvin</a></li>
+                <li><a href="">Kratos</a></li>
+            </ul>
+            <br>
+            <ul class="lastName">
+                <li><a href="">Dark</a></li>
+                <li><a href="">Donal</a></li>
+                <li><a href="">Duy</a></li>
+            </ul>
+
+            <form action="" id="form-1"></form>
+            <form action="" id="form-2"></form>
+        </div>
+    </div>
     <script src="/main.js"> </script>
-
-    <h1>Tui tên Duy</h1>
-
 </body>
+
 </html>
