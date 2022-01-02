@@ -525,12 +525,12 @@
  * và đùng tên biến đã tạo (.)+ attributes muốn thêm
  */
 
-var firstNameElt = document.querySelectorAll('a')[2]// Lấy element
-console.log(firstNameElt);
+// var firstNameElt = document.querySelectorAll('a')[2]// Lấy element
+// console.log(firstNameElt);
 
-firstNameElt.setAttribute('style', 'color:red;')//set
+// firstNameElt.setAttribute('style', 'color:red;')//set
 
-console.log(firstNameElt.getAttribute('style'));//get
+// console.log(firstNameElt.getAttribute('style'));//get
 //Lấy phần tử trong một Nodelist
 // for(var i = 0; i <elementFirstName.length;i++){
 //     console.log(elementFirstName[i]);
@@ -538,3 +538,38 @@ console.log(firstNameElt.getAttribute('style'));//get
 
 // console.log(firstNameElt);
 // console.log(elementFirstName);
+
+
+/**
+ * innerHTML va textContent dung de tuong tac voi Text Node
+ * textContent se lay ra tat ca nhung textNode ba gom khoang trang, 
+ * không bị ảnh hưởng bởi các attribute trong elementnode,
+ * innerHTML trả ra tất cả những gì ta thấy trên file html bên trong node ta chọn.
+ * innerText trả ra giống như ta thấy ở trình duyệt 
+ * đỗi tất cả các seter elenment thành text
+ */
+var getText = document.querySelector('.firstName')
+
+/* seter bằng innerText thì console show ra i như mình gõ 
+/ ở JS nhưng đc chuyển thổi thành code ở dạng HTML, khoảng trắng = <br>
+*/ 
+// getText.innerText = `
+
+//  Test-Text-1
+// `
+
+/*textcontent thì xuất ra HTML là theo mặc định, nhưng ở
+ console thì xuất theo những gì ta gỏ ở JS
+*/
+var b = getText.textContent = `
+<br>
+1
+2
+
+Test-Text-2
+3
+4
+` // seter
+console.log(b);
+// console.log(getText.innerText); // geter
+// console.log(getText.textContent); // geter
