@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+#header {
+    max-width: 100%;
+    padding: 0px 255px;
+    min-height: 74px;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+
+#header .subnav {
+    position: relative;
+    float: right;
+
+}
+
+.subnav>li {
+    line-height: 74px;
+    display: inline-block;
+    position: relative;
+    list-style-type: none;
+    padding: 0px 12px;
+    right: 0;
+}
+
+.subnav>li a:hover{
+    color: #000;
+    opacity: 0.6;
+}
+
+.subnav li a {
+    color: #000;
+    opacity: 0.8;
+    padding: 22px 0;
+    font-family: sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.btn-member {
+    padding: 12px 20px;
+    background-color: #fff;
+    border-radius: 6px ;
+    border: .3px solid;
+    color: #CCC;
+
+}
+.btn-member:hover .sub-btn-member {
+    visibility: visible;
+    animation:FaceInBtn ease-in-out 0.1s;
+}
+
+.btn-member:hover { 
+    border: .3px solid white;
+    
+}
+
+.sub-btn-member {
+    visibility: hidden;
+    border-radius: 4px;
+    margin-top: 26px;
+    position: absolute;
+    background-color: white;
+    border: 1px solid;
+    margin-left: -48px;
+    width: 170px;
+    height: 210px;
+    box-shadow: 0 0 0 1px rgb(0 0 0 / 8%), 0 2px 10px rgb(0 0 0 / 20%);
+}   
+
+.sub-btn-member>a {
+ 
+}
+
+.sub-btn-member>li{
+    position: relative;
+    display: block;
+    line-height: calc(210px/4);
+    justify-content: center;   
+}
+
+#nav {
+
+}
+
+.logo-menu{
+    max-width: 100%;
+    position: absolute;
+    bottom: 0;
+    width: 132px;
+    height: auto;
+    box-sizing: border-box;
+}
+
+
+@keyframes FaceInBtn {
+    from {
+        transform: translateY(60px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}

@@ -6,73 +6,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        *{
-            padding: 0;
-            margin: 0;
-
-        }
-        .firstName li:hover a {
-            background-color: royalblue;
-            color: red;
-            text-transform: uppercase;
-        }
-
-        .lastName li:hover a {
-            background-color: darkblue;
-            color: darkorange;
-            text-transform: uppercase;
-        }
-        
-        li {
-
-            min-height: 60px;
-            display: block;
-            list-style-type: none;
-            font-size: 20px;
-        }
-
-        a {
-            line-height: 60px;
-            display: block;
-            text-decoration: none;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div id="main">
-        <h1 id="textNode1">
 
-            <span style="display: none;">Text-Node-1</span><br>
-            <span>Text-Node-2</span>
-            <style>
-                .p { 
-                    min-height: 200px;
-                    min-height: 120px;
-                }
-            </style>
-        </h1>
-        <div id="listName">
-            <ul class="firstName">
-                <li><a href="">Kante</a></li>
+    <header id="header">
+        <img class="logo-menu" src="https://themify.me/wp-content/themes/themify-v32/images/themify-logo.png" alt="" srcset="">
+        <ul class="subnav">
+            <li><a href="">Themes</a></li>
+            <li><a href="">Builder Pro</a></li>
+            <li><a href="">Plugins</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Affiliates</a></li>
+            <li><a href="">Contact</a></li>
 
-                <li><a href="">Kelvin</a></li>
-                
-                <li><a href="">Kratos</a></li>
-            </ul>
-            <br>
-            <ul class="lastName">
-                <li><a href="">Dark</a></li>
-                <li><a href="">Donal</a></li>
-                <li><a href="">Duy</a></li>
-            </ul>
+            <li><button class="btn-member">
+                <a href="">Members</a>
 
-            <form action="" id="form-1"></form>
-            <form action="" id="form-2"></form>
-        </div>
+                <ul class="sub-btn-member">
+                    <li><a href="">Member Area</a></li>
+                    <li><a href="">Support Forums</a></li>
+                    <li><a href="">Documentation</a></li>
+                    <li><a href="">Support FAQ</a></li>
+                </ul>
+
+            </button></li>
+        </ul>
+    </header>
+
+    <nav id="nav">
+
+    </nav>
+    <div id="content">
+        <input class="js-text-btnConten" type="text" value="">
+        <input class="js-checkbox-btnConten" type="checkbox" name="" id="">
+
+        <select name="" id="" class="js-select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
     </div>
-    <script src="/main.js"> </script>
+    <script src="/main.js">
+    </script>
 </body>
 
 </html>

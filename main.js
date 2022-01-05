@@ -5,7 +5,7 @@
 // // // alert(fullName) /** Thông báo ra màn hình biến fullName */
 // // // alert(age)
 
-// // // console.log(fullName) // hiển thị thông tin ra consle
+//  console.log(fullName) // hiển thị thông tin ra consle
 
 // // // confirm(); // hỏi ý
 // // // prompt(); // có nhập thông tin
@@ -18,9 +18,9 @@
 // // //     console.log('Log chạy' + Math.random())
 // // // }, 1000);
 // // //-----------------------------------
-// // var a = 1 + 2 ; // toán tử số học, trong JS gán ==
 // // console.log(a)
 
+// // var a = 1 + 2 ; // toán tử số học, trong JS gán ==
 
 // // var a = 2;
 // // var b = 2;
@@ -103,7 +103,7 @@
 // //   age: 18,
 // //   phoneCall:'3232222232',
 // //   myFuntion,
-  
+
 // // }
 
 // // console.log(myObject)
@@ -222,7 +222,7 @@
 
 // function qeea(a, b) {
 //     qeea = a + b
-    
+
 // }
 
 // console.log(qeea);
@@ -250,7 +250,7 @@
 //             return this.getName()
 
 //         }
-        
+
 //     }
 // }
 
@@ -462,7 +462,7 @@
 // var isFree = courses.every(function (course, index) {
 //   console.log(index);
 //   return course.coin ===2;
-  
+
 // })
 
 // console.log(isFree);
@@ -500,7 +500,7 @@
 //   for( ; i < this.length; i++ ){
 //     totalNum = callback(totalNum, this[i], i, this)
 //     }
-    
+
 //   return totalNum
 // }
 // const listNum = [1,2,3,4,5]
@@ -548,11 +548,11 @@
  * innerText trả ra giống như ta thấy ở trình duyệt 
  * đỗi tất cả các seter elenment thành text
  */
-var getText = document.querySelector('.firstName')
+// var getText = document.querySelector('.firstName')
 
 /* seter bằng innerText thì console show ra i như mình gõ 
 / ở JS nhưng đc chuyển thổi thành code ở dạng HTML, khoảng trắng = <br>
-*/ 
+*/
 // getText.innerText = `
 
 //  Test-Text-1
@@ -560,16 +560,63 @@ var getText = document.querySelector('.firstName')
 
 /*textcontent thì xuất ra HTML là theo mặc định, nhưng ở
  console thì xuất theo những gì ta gỏ ở JS
-*/
-var b = getText.textContent = `
-<br>
-1
-2
+// */
+// var b = getText.textContent = `
+// <br>
+// 1
+// 2
 
-Test-Text-2
-3
-4
-` // seter
-console.log(b);
+// Test-Text-2
+// 3
+// 4
+// ` // seter
+// console.log(b);
 // console.log(getText.innerText); // geter
 // console.log(getText.textContent); // geter
+
+
+// var f8LinkElement = document.querySelectorAll('a')[0]
+// // console.log(f8LinkElement);
+
+// var f8ShortLink = f8LinkElement.getAttribute('href')
+// // console.log(f8ShortLink);
+
+// document.querySelector('a:nth-child(2)').href = f8ShortLink;
+// document.querySelector('div').setAttribute('data-url', f8ShortLink);
+
+
+// var valueInput;
+
+// var inputElement = document.querySelector('.js-text-btnConten')
+
+// inputElement.oninput = function(e) {
+//     valueInput = e.target.value;
+// }
+
+// inputElement.onkeyup = function(e) {
+//         console.log(e.target.value);
+//     }
+//     //dùng được onchange, oninput..., value để lấy ra giá trị trong box
+
+// var inputElement = document.querySelector('.js-checkbox-btnConten')
+
+// inputElement.onchange = function(e) {
+//         console.log(e.target.checked);
+//     }
+//     // đối với checked thì onchage và
+
+// var selectElement = document.querySelector('.js-select')
+
+// selectElement.onchange = function(e) {
+//     console.log(e.target.value);
+// }
+
+
+document.onkeydown = function(e) {
+        switch (e.which) {
+            case 27:
+                console.log('EXIT');
+                break;
+        }
+    }
+    //which là sp61 thự tự bàn phím
