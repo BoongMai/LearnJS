@@ -612,11 +612,46 @@
 // }
 
 
-document.onkeydown = function(e) {
-        switch (e.which) {
-            case 27:
-                console.log('EXIT');
-                break;
-        }
-    }
-    //which là sp61 thự tự bàn phím
+// document.onkeydown = function(e) {
+//         switch (e.which) {
+//             case 27:
+//                 console.log('EXIT');
+//                 break;
+//         }
+//     }
+//     //which là sp61 thự tự bàn phím
+
+
+//preventDefault dùng để ngăn hành vi mặc định 
+var aElements = document.querySelector('.btn-member')
+
+aElements.onclick = function(e) {
+    e.preventDefault()
+}
+
+function viec1() {
+    console.log(Math.floor(Math.random() * 100));
+}
+
+function viec2() {
+    console.log('viec 2');
+}
+
+aElements.addEventListener('click', viec1)
+
+
+aElements.addEventListener('click', viec2)
+
+
+setTimeout(function() {
+    aElements.removeEventListener('click', viec2) //huy lang nghe
+}, 3000)
+
+// for (const aElement of aElements) {
+//     aElement.onclick = function(e) {
+
+//         if (!e.target.href.startsWith('https://fullstack.edu.vn/')) {
+//             e.preventDefault();
+//         }
+//     }
+// }
