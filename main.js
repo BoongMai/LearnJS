@@ -623,35 +623,69 @@
 
 
 //preventDefault dùng để ngăn hành vi mặc định 
-var aElements = document.querySelector('.btn-member')
+// var aElements = document.querySelector('.btn-member')
 
-aElements.onclick = function(e) {
-    e.preventDefault()
-}
+// aElements.onclick = function(e) {
+//     e.preventDefault()
+// }
 
-function viec1() {
-    console.log(Math.floor(Math.random() * 100));
-}
+// function viec1() {
+//     console.log(Math.floor(Math.random() * 100));
+// }
 
-function viec2() {
-    console.log('viec 2');
-}
+// function viec2() {
+//     console.log('viec 2');
+// }
 
-aElements.addEventListener('click', viec1)
-
-
-aElements.addEventListener('click', viec2)
+// aElements.addEventListener('click', viec1)
 
 
-setTimeout(function() {
-    aElements.removeEventListener('click', viec2) //huy lang nghe
-}, 3000)
+// aElements.addEventListener('click', viec2)
+
+
+// setTimeout(function() {
+//     aElements.removeEventListener('click', viec2) //huy lang nghe
+// }, 3000)
 
 // for (const aElement of aElements) {
 //     aElement.onclick = function(e) {
-
 //         if (!e.target.href.startsWith('https://fullstack.edu.vn/')) {
 //             e.preventDefault();
 //         }
 //     }
 // }
+
+
+/**
+ * Cách tạo ra một promise
+ * 1. khởi tạo new Promise()
+ * 2.truyền excuter
+ * 3.Các phương thức thường gặp:
+ *  .then() thành công nhảy vào đây
+ *  .catch()    thất bại nhảy vào đây, bẩy lỗi
+ *  .finally() xong h=lời hứa!
+ */
+
+var promise = new Promise(
+    function(resolve, reject) {
+
+        resolve(
+            alert('asds')
+        )
+    }
+)
+
+
+promise
+
+    .then(function(info) {
+    console.log(info);
+})
+
+.catch(function(faill) {
+    console.log(faill);
+})
+
+.finally(function() {
+    console.log("DOne!!!");
+})
