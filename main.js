@@ -657,6 +657,7 @@
 
 
 /**
+ * Promise giúp giải quyết thao tác bất đồng bộ bất đồng bộ, call back hell
  * Cách tạo ra một promise
  * 1. khởi tạo new Promise()
  * 2.truyền excuter
@@ -666,26 +667,110 @@
  *  .finally() xong h=lời hứa!
  */
 
-var promise = new Promise(
-    function(resolve, reject) {
+// var promise = new Promise(
+//     function(resolve, reject) {
 
-        resolve(
-            alert('asds')
-        )
-    }
-)
+//         resolve(
+//             alert('asds')
+//         )
+//     }
+// )
 
 
-promise
+// promise
 
-    .then(function(info) {
-    console.log(info);
-})
+//     .then(function(info) {
+//     console.log(info);
+// })
 
-.catch(function(faill) {
-    console.log(faill);
-})
+// .catch(function(faill) {
+//     console.log(faill);
+// })
 
-.finally(function() {
-    console.log("DOne!!!");
-})
+// .finally(function() {
+//     console.log("DOne!!!");
+// })
+
+
+// var users = [{
+//         id: 1,
+//         name: 'Thanh Duy'
+//     },
+//     {
+//         id: 2,
+//         name: 'Duy Antonio'
+//     }
+// ]
+
+// var comments = [{
+//         id: 1,
+//         user_id: 1,
+//         content: "Holy sheeeeeeet !!!"
+//     },
+//     {
+//         id: 2,
+//         user_id: 2,
+//         content: "Whatt thee fuckk !!!"
+//     }
+// ]
+
+// function getComments() {
+//     return new Promise(function(resolve) {
+//         setTimeout(function() {
+//             resolve(comments)
+//         }, 1000)
+//     })
+// }
+
+// function getUserByIds(userIds) {
+//     return new Promise(function(resolve) {
+//         var result = users.filter(function(user) {
+//             return userIds.includes(user.id)
+//         })
+//         setTimeout(function() {
+//             resolve(result)
+//         }, 1000)
+//     }, 1000)
+// }
+
+
+// getComments()
+//     .then(function(comments) {
+//         var userID = comments.map(function(comments) {
+//             return comments.User_id
+//         })
+
+//         return getUserByIds(userID)
+//             .then(function(users) {
+//                 return {
+//                     user: users,
+//                     comment: comments,
+//                 }
+//             })
+//     })
+//     .then(function(data) {
+//         console.log(data);
+//     })
+
+var postAPI = 'https://jsonplaceholder.typicode.com/posts'
+
+fetch(postAPI)
+    //gọi đến API
+    .then(function(response) {
+        return response.json()
+    })
+    //xuất ra từng phần tử
+    .then(function(posts) {
+        console.log(posts);
+        var htmls = posts.map(function(post) {
+            return `<li>
+            <h2>${post.title}</h2>
+            <p>${post.body}</p>
+            </li>`
+        })
+        var html = htmls.join('')
+        document.getElementById('comment-block').innerHTML = html;
+    })
+    .catch(function(err) {
+        console.log('lỗi rồi');
+    })
