@@ -752,25 +752,39 @@
 //         console.log(data);
 //     })
 
-var postAPI = 'https://jsonplaceholder.typicode.com/posts'
+// var postAPI = 'https://jsonplaceholder.typicode.com/posts'
+
+// fetch(postAPI)
+//     //gọi đến API
+//     .then(function(response) {
+//         return response.json()
+//     })
+//     //xuất ra từng phần tử
+//     .then(function(posts) {
+//         console.log(posts);
+//         var htmls = posts.map(function(post) {
+//             return `<li>
+//             <h2>${post.title}</h2>
+//             <p>${post.body}</p>
+//             </li>`
+//         })
+//         var html = htmls.join('')
+//         document.getElementById('comment-block').innerHTML = html;
+//     })
+//     .catch(function(err) {
+//         console.log('lỗi rồi');
+//     })
+
+var postAPI = "http://localhost:3000/users"
 
 fetch(postAPI)
-    //gọi đến API
     .then(function(response) {
         return response.json()
     })
-    //xuất ra từng phần tử
-    .then(function(posts) {
-        console.log(posts);
-        var htmls = posts.map(function(post) {
-            return `<li>
-            <h2>${post.title}</h2>
-            <p>${post.body}</p>
-            </li>`
+    .then(function(users) {
+        var htmls = users.map(function(user) {
+            return `Age: ${user.age}`
         })
         var html = htmls.join('')
-        document.getElementById('comment-block').innerHTML = html;
-    })
-    .catch(function(err) {
-        console.log('lỗi rồi');
+        document.getElementById('comment-block').innerHTML = html
     })
