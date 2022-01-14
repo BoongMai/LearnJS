@@ -914,9 +914,15 @@
 
 //spread
 
-var array1 = ['a', 'b', 'c', 'd', 'e', 'f']
+// var array1 = ['a', 'b', 'c', 'd', 'e', 'f']
 
-var array2 = ['1', '2', '3', '4', '5']
+// var array2 = ['1', '2', '3', '4', '5']
 
-var array3 = [...array1, ...array2];
-console.log(array3);
+// var array3 = [...array1, ...array2];
+// console.log(array3);
+
+
+import logger, {} from './logger.js';
+import * as constants from './constants.js'
+
+logger('hello world', constants.TYPE_WARN)

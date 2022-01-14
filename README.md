@@ -30,3 +30,11 @@ tải lên thì
 - rest là phương thức chạy qua các phần tử trong một object hoặc array.
 - spread là phương thức giúp mình lượt bỏ hai đấu đầu của một mảng hoặc một array
     + VD: var a = ['1', '2', '3', '4', '5'] == '1', '2', '3', '4', '5'
+
+    - Module: nạp vào bằng Import/ xuất export *nhớ add type="module" vào file index chứa đường link tới file module
+
+        + Có nhiều cách import:
+            * import <Tên module> from ''.
+            * import <tên module, { hằng của các export }> from ''.
+            * imoporn * as <tên module> from ''.
+    
