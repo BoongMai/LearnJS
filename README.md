@@ -19,8 +19,14 @@ tải lên thì
     + Để chạy ta thêm "start" vào line  "scripts" ở file package.json.Trong "start" ta thêm dòng chạy json vào "json-server --watch db.json"
 
     + Chạy server = "npm start"
+    
 - CRUD:
     + Create -> POST
     + Read -> GET
     + Update -> PUT/PATCH
     + Delete -> DELETE
+
+- Destructuring là cách viết vắng tắc nhưng cùng một kết quả
+- rest là phương thức chạy qua các phần tử trong một object hoặc array.
+- spread là phương thức giúp mình lượt bỏ hai đấu đầu của một mảng hoặc một array
+    + VD: var a = ['1', '2', '3', '4', '5'] == '1', '2', '3', '4', '5'

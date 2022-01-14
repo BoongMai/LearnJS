@@ -775,16 +775,148 @@
 //         console.log('lỗi rồi');
 //     })
 
-var postAPI = "http://localhost:3000/users"
+// var postAPI = "http://localhost:3000/users"
 
-fetch(postAPI)
-    .then(function(response) {
-        return response.json()
-    })
-    .then(function(users) {
-        var htmls = users.map(function(user) {
-            return `Age: ${user.age}`
-        })
-        var html = htmls.join('')
-        document.getElementById('comment-block').innerHTML = html
-    })
+// fetch(postAPI)
+//     .then(function(response) {
+//         return response.json()
+//     })
+//     .then(function(users) {
+//         var htmls = users.map(function(user) {
+//             return `<li>Age: ${user.age}</li><br>`
+//         })
+//         var html = htmls.join('')
+//         document.getElementById('comment-block').innerHTML = html
+//     })
+
+// function Course(name, price) {
+//     this.name = name
+//     this.price = price
+
+//     function getName() {
+//         return this.name
+//     }
+
+// }
+
+
+
+// class Course {
+//     constructor(name, price) {
+//         this.name = name;
+//         this.price = price;
+//     }
+
+//     getName() {
+//         return this.name
+//     }
+//     getPrice() {
+//         return this.price
+//     }
+// }
+
+// var a = new Course("duy", "1220")
+
+// console.log(a.getName());
+// console.log(a.getPrice());
+
+// function logger(log, type = 'log') {
+//     console[type](log);
+// }
+
+// logger('ABCD')
+
+// var name = 'Duy'
+// var age = 18
+
+// var course = {
+//     name,
+//     age,
+//     getName() {
+//         return name
+//     }
+// }
+// console.log(course.getName());
+
+
+// var fieldName = 'name'
+// var fieldAge = 'age'
+
+// const course = {
+//     [fieldName]: 'Duy',
+//     [fieldAge]: 22
+// }
+
+// console.log(course);
+
+// muốn lấy ra full mảng thì sau biến , ...rest
+
+// var array = ['Duy', 'Trường', 'Tú', 'Đạt']
+
+// var [a, ...rest] = array
+
+// console.log(a);
+// console.log(rest);
+
+
+// var course = {
+//     name: '12A6',
+//     subject: 'Math',
+//     count: 31,
+//     child: {
+//         name: '11A9'
+//     }
+// }
+// var { name: parentname, subject, count, child: { name } } = course
+
+// console.log(parentname);
+//muốn đổi tên thì mình : <tên mới>
+
+// function logger(...param) {
+//     console.log(param);
+// }
+
+// console.log(logger(1, 2, 3, 4, 5, 6));
+
+// function logger({ name, subject, ...rest }) {
+//     console.log(name);
+//     console.log(subject);
+//     console.log(rest);
+// }
+
+// logger({
+//     name: '12A6',
+//     subject: 'Math',
+//     count: 31,
+
+// })
+
+
+// function logger([a, b, ...rest]) {
+//     console.log(a);
+//     console.log(b);
+//     console.log(rest);
+// }
+
+// logger([1, 2, 3, 4, 5, 6])
+
+// var array1 = ['a', 'b', 'c', 'd', 'e', 'f']
+
+// var array2 = ['1', '2', '3', '4', '5']
+
+// var array3 = [];
+
+// function noiMang() {
+//     return array3 = array1.concat(array2);
+// }
+
+// console.log(noiMang());
+
+//spread
+
+var array1 = ['a', 'b', 'c', 'd', 'e', 'f']
+
+var array2 = ['1', '2', '3', '4', '5']
+
+var array3 = [...array1, ...array2];
+console.log(array3);
